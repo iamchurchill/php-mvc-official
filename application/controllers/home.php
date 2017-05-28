@@ -1,6 +1,7 @@
 <?php 
 	class Home extends Controller{
 		public function index($id = 1, $name = 'Fred'){
+			
 			$user = $this->model('User');
 			$user->id = $id;
 			$user->name = $name;
