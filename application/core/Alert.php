@@ -5,7 +5,7 @@
         }
         public static function getInstance(){
             if(!isset(self::$_instance)){
-                self::$_instance = new alert();
+                self::$_instance = new Alert();
             }
             return self::$_instance;
         }
