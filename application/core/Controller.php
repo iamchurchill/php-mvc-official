@@ -1,5 +1,5 @@
 <?php 
-	class Controller{
+	class controller{
 		protected function model($model){
 			require_once '../application/models/' . $model . '.php';
 			return new $model();

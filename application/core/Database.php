@@ -1,5 +1,5 @@
 <?php 
-    class Database{
+    class database{
         private static $_instance = NULL;
         private $_pdo, 
                 $_query, 
@@ -7,9 +7,9 @@
                 $_results,
                 $_count = 0;
         public function __construct(){
-             try{
+            try {
                $this->_pdo = new PDO("mysql:host=" . Config::get('mysql/host')  . ";dbname=" . Config::get('mysql/db')  . ";charset=utf8", Config::get('mysql/username') , Config::get('mysql/password')); 
-            }catch(PDOException $e){
+            } catch(PDOException $e) {
                 die($e->getMessage());
             }
         }
@@ -32,7 +32,9 @@
                 if($this->_query->execute()){
                     $this->_results = $this->_query->fetchAll(PDO::FETCH_OBJ);
                     $this->_count = $this->_query->rowCount(); 
-                }else{$this->_error = true;}
+                }else{
+					$this->_error = true;
+				}
             }
             return $this;
         }

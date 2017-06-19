@@ -1,6 +1,6 @@
 <?php
-	class Log{
-		public function log_action($action, $msg=""){
+	class log{
+		public function put($action, $msg=""){
 			$new_file = file_exists('../logs.txt') ? true : false ;
 			if ($handle = fopen('../logs.txt', 'a')) {
 				$time_of_action = strftime('%Y-%m-%d %H:%M:%S', time());

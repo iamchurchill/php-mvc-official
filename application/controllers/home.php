@@ -1,5 +1,5 @@
 <?php 
-	class Home extends Controller{
+	class Home extends controller{
 		public function index($id = 1, $name = 'Fred'){
 			
 			$user = $this->model('User');

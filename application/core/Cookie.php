@@ -1,5 +1,5 @@
 <?php
-    class Cookie {
+    class cookie {
         public static function exists($name){
             return (isset($_COOKIE[$name])) ? true : false;
         }
